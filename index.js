@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 
 //Attempt to connect to DB
 mongoose
-    .connect(keys.mongoURI || process.env.MONGO_URI)
+    .connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB Connected Successfully"))
     .catch(err => console.log(err))
 

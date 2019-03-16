@@ -6,8 +6,8 @@ const Person = mongoose.model("myperson");
 
 passport.use(
     new GoogleStrategy({
-            clientID: keys.google.client_id || process.env.GOOGLE_CLIENT_ID,
-            clientSecret: keys.google.client_secret || process.env.GOOGLE_CLIENT_KEY,
+            clientID: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_KEY,
             callbackURL: "/auth/google/cb"
         },
         function (accessToken, refreshToken, profile, cb) {
