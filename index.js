@@ -9,6 +9,7 @@ const passport_GoogleStrategy = require('./Strategies/google_Strategy');
 const passport_FBStrategy = require('./Strategies/fb_strategy');
 const googleApi = require('./router/api');
 const keys = require('./config/setup')
+require('dotenv').config()
 
 //Middleware for passport
 app.use(passport.initialize());
@@ -20,7 +21,7 @@ app.set('view engine', 'ejs');
 
 //Attempt to connect to DB
 mongoose
-    .connect(keys.mongoURI)
+    .connect(keys.mongoURI || process.env.MONGO_URI)
     .then(() => console.log("MongoDB Connected Successfully"))
     .catch(err => console.log(err))
 
