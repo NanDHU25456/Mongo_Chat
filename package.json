@@ -1,5 +1,5 @@
 {
-  "name": "Mongo Chat",
+  "name": "mongo-chat",
   "version": "1.0.0",
   "description": "Chat Application using Socket.io",
   "main": "index.js",
