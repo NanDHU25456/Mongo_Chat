@@ -8,7 +8,7 @@ const passport = require('passport');
 const passport_GoogleStrategy = require('./Strategies/google_Strategy');
 const passport_FBStrategy = require('./Strategies/fb_strategy');
 const googleApi = require('./router/api');
-const keys = require('./config/setup')
+// const keys = require('./config/setup')
 require('dotenv').config()
 
 //Middleware for passport

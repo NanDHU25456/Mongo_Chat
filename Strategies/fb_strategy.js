@@ -2,7 +2,7 @@ var passport = require("passport");
 var FacebookStrategy = require('passport-facebook').Strategy;
 const mongoose = require('mongoose');
 const Person = mongoose.model("myperson");
-const keys = require('../config/setup')
+// const keys = require('../config/setup')
 
 passport.use(new FacebookStrategy({
         clientID: keys.fb.client_id || process.env.FB_CLIENT_ID,
